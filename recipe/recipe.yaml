@@ -10,6 +10,9 @@ package:
 source:
   url: https://github.com/scipp/scipp/archive/${{ version }}.tar.gz
   sha256: 676ecb68e8fbbcd5691b0b5cbe16f7a71677d8fc0cf7fdb3a36e3d825f265aa4
+  patches:
+    - if: version == "26.9.0"
+      then: pandas-3.1-rename-axis.patch
 
 build:
   number: 3
