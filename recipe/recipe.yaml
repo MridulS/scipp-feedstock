@@ -44,8 +44,6 @@ requirements:
         - python
     - cmake
     - ninja
-    - if: unix
-      then: make
   host:
     - python
     - tbb-devel
