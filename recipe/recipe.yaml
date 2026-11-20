@@ -47,13 +47,15 @@ requirements:
     - libboost-headers
     - eigen
     - pybind11 3.0.*
-    - benchmark
     - gmock
     - gtest
   run:
-    - numpy
+    - numpy >=2
     - python
     - tbb
+  ignore_run_exports:
+    by_name:
+      - gtest  # Used only by the C++ tests.
 
 tests:
   - python:
