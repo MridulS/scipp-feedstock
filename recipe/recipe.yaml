@@ -30,9 +30,6 @@ build:
         then: ctest --preset test
   dynamic_linking:
     overlinking_behavior: error
-    missing_dso_allowlist:
-      - if: win
-        then: '*'
 
 requirements:
   build:
