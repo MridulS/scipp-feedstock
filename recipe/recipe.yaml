@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "26.9.0"
+  version: "26.11.0"
 
 package:
   name: scipp
@@ -9,13 +9,10 @@ package:
 
 source:
   url: https://github.com/scipp/scipp/archive/${{ version }}.tar.gz
-  sha256: 676ecb68e8fbbcd5691b0b5cbe16f7a71677d8fc0cf7fdb3a36e3d825f265aa4
-  patches:
-    - if: version == "26.9.0"
-      then: pandas-3.1-rename-axis.patch
+  sha256: 3e6bff5e865bba453c0ba6ec21f3fbfc41c10435cdc7d22813eed65ac471a354
 
 build:
-  number: 3
+  number: 0
   skip: match(python, "<3.12")
   script:
     env:
